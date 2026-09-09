@@ -1,0 +1,46 @@
+# Ideas for the next iteration
+
+Captured 2026-09-09. Not built yet. Read this file at the start of the next
+round of changes.
+
+## 1. Home page: where to ski in NZ this week
+
+- A landing page that ranks fields for the coming week and recommends where to go.
+- Top 10 ranking, with a filter for North Island / South Island.
+- Needs more mountains in `js/mountains.js` first (currently Mt Hutt, Cardrona,
+  Treble Cone). Candidates: Coronet Peak, The Remarkables, Mt Ruapehu (Whakapapa
+  and Turoa), Craigieburn and the other Canterbury club fields, Ohau, Mt Dobson,
+  Roundhill, Porters, Mt Lyford, Rainbow, Manganui.
+- Ranking inputs to decide on: consensus snowfall over the week, snow quality
+  (temperature / freezing level), wind-hold risk on each day, rain risk at the base,
+  model agreement, and the mountain's own wind-sector rating. Probably a score per
+  day, then a week score, with the reasoning shown so it is not a black box.
+- Implementation note: one Open-Meteo request per mountain per visit; with 15 or
+  more fields consider fetching daily data only for the home page and hourly data
+  only when a mountain is opened.
+
+## 2. Light mode / dark mode toggle
+
+- The site already follows the operating system theme. Add a manual toggle in the
+  header that remembers the choice (localStorage), with "system" as the default.
+
+## 3. Photo backgrounds per mountain
+
+- Replace the flat background with a high-resolution photo of the selected field,
+  or a view from it (e.g. looking down a valley).
+- Licensing is the main constraint. Only use images with a licence that permits
+  reuse, and keep attribution visible. Good sources: Wikimedia Commons (check each
+  file's licence: CC0, CC BY, or CC BY-SA are fine; keep the credit), Unsplash
+  and Pexels (their licences allow use; credit is polite), or your own photos.
+  Do not use ski-field marketing photos or search-engine results without checking.
+- Keep a `PHOTO-CREDITS.md` listing the file, author, source URL and licence.
+- Performance: resize to about 2000 px wide and compress (WebP or JPEG, roughly
+  300 to 500 KB each). Serve the text on a translucent panel so it stays readable.
+- Store photos in an `img/` folder in the repository.
+
+## Other loose ends
+
+- ACCESS-G returned no data from Open-Meteo on 2026-09-09; it will appear
+  automatically if the feed returns.
+- Consider showing the model accuracy by lead time (day 1 vs day 5) once there is
+  enough history; the scorer already records `mae_by_lead`.
