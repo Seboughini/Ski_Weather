@@ -25,6 +25,9 @@ Read this file at the start of the next round of changes.
   Two-finger scrolling on the trackpad would then also zoom while over the map;
   if that feels wrong, the common alternative is "hold Ctrl/Cmd and scroll to
   zoom" with a hint overlay. Decide which feel is wanted when building it.
+  Also replace the map's lead text ("Zoom in to separate the Craigieburn Range
+  fields") with short zoom/pan instructions that match whatever gesture is
+  chosen, e.g. "Drag to pan. Pinch or scroll over the map to zoom."
 
 - **Recent snowfall and snow base** (added 2026-09-09): show snowfall over the
   last 48 hours and last 7 days, plus the current snow base depth, per field.
