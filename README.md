@@ -1,9 +1,22 @@
 # NZ Ski Weather
 
-A stand-alone website that compares seven global weather models for New Zealand
-ski fields, blends them into a consensus forecast, and interprets that forecast
-against what each mountain likes and dislikes (wind directions that load the
-basins, directions that close the lifts, freezing-level thresholds).
+A stand-alone website that compares seven global weather models for 18 New
+Zealand ski fields, blends them into a consensus forecast, ranks the fields for
+the week ahead, and interprets each forecast against what the mountain likes
+and dislikes (wind directions that load the basins, directions that close the
+lifts, freezing-level thresholds).
+
+Pages:
+
+- **Home** (`#/`): top-10 ranking for the next 7 days with a North / South
+  Island filter, and a map with a pin per field sized by consensus snowfall over
+  a chosen range of days.
+- **Field page** (`#/m/<id>`): 7-day consensus cards, the "mountain read" for a
+  selected day, model-by-model table, hourly spaghetti charts, model accuracy,
+  the mountain guide, and links to the field's own snow cams and website.
+
+The header has a theme switch (automatic / light / dark). Each page has a
+Creative Commons or public-domain background photo; see `PHOTO-CREDITS.md`.
 
 It is plain HTML, CSS and JavaScript with no build step. Forecasts come straight
 from [Open-Meteo](https://open-meteo.com/) in the browser, so the site works
@@ -42,8 +55,30 @@ Actions tab.
 
 Add an entry to `js/mountains.js`. The `id`, `lat`, `lon` and `elev.mid` keys
 must stay on the lines shown in the existing entries because the scoring
-script reads them from that file. Everything else (sectors, text, thresholds)
-is free-form.
+script reads them from that file. Everything else (sectors, text, thresholds,
+links, photo) is free-form. Entries marked `detail: 'sketch'` show a notice on
+the page asking for local corrections.
+
+For a photo, find a Creative Commons or public-domain image (Wikimedia Commons
+is the easiest source), save it to `img/<id>.jpg` at about 1800 px wide, fill
+in the `photo` block, and add a row to `PHOTO-CREDITS.md`.
+
+## How the ranking works
+
+Each day gets a 0–100 score from the consensus forecast: fresh snow (including
+the previous day), summit wind against the field's hold threshold, rain risk
+from the snow line versus base and mid-mountain elevation, storm visibility,
+warmth and sunshine, plus a small adjustment for how the mountain rates the
+wind direction. The week score is half the average day and half the average of
+the best three days. The formula is in `scoreDay` in `js/app.js` and is meant
+to be tuned.
+
+## Snow cams and map
+
+Snow cams link to each field's own webcam page rather than embedding the
+images, which the fields own and change without notice. The map uses Leaflet
+and OpenStreetMap tiles loaded from public CDNs; without internet access the
+map shows a note and the rest of the site still works.
 
 ## How the numbers are derived
 

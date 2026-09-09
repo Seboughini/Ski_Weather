@@ -63,15 +63,17 @@ def get_json(url, params, retries=3):
 
 
 def record_forecasts(mountains, today):
-    """Fetch today's 7-day daily forecast for every model and save it."""
+    """Fetch today's 7-day daily forecast for every model and mountain in one request and save it."""
     FORECAST_DIR.mkdir(parents=True, exist_ok=True)
     out_file = FORECAST_DIR / f'{today.isoformat()}.json'
     rec = {'issued': today.isoformat(), 'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'mountains': {}}
-    for m in mountains:
-        d = get_json('https://api.open-meteo.com/v1/forecast', {
-            'latitude': m['lat'], 'longitude': m['lon'], 'elevation': m['elev'],
-            'daily': ','.join(VARS), 'models': ','.join(MODELS), 'timezone': TZ, 'forecast_days': 7, 'wind_speed_unit': 'kmh'})
-        daily = d['daily']
+    d = get_json('https://api.open-meteo.com/v1/forecast', {
+        'latitude': ','.join(str(m['lat']) for m in mountains), 'longitude': ','.join(str(m['lon']) for m in mountains),
+        'elevation': ','.join(str(m['elev']) for m in mountains),
+        'daily': ','.join(VARS), 'models': ','.join(MODELS), 'timezone': TZ, 'forecast_days': 7, 'wind_speed_unit': 'kmh'})
+    results = d if isinstance(d, list) else [d]
+    for m, res in zip(mountains, results):
+        daily = res['daily']
         entry = {'time': daily['time'], 'models': {}}
         for mod in MODELS:
             vals = {v: daily.get(f'{v}_{mod}') for v in VARS}
@@ -111,6 +113,7 @@ def update_truth(mountains, forecasts, today):
                         added += 1
             print(f"truth {m['id']}: +{added} days (cache {len(cache)})")
             f.write_text(json.dumps(cache, separators=(',', ':'), sort_keys=True), encoding='utf-8')
+            time.sleep(1)
         truth[m['id']] = cache
     return truth
 

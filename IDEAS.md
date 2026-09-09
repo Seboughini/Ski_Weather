@@ -1,7 +1,26 @@
-# Ideas for the next iteration
+# Ideas and iteration log
 
-Captured 2026-09-09. Not built yet. Read this file at the start of the next
-round of changes.
+Read this file at the start of the next round of changes.
+
+## Done in iteration 2 (2026-09-09)
+
+- Home page with top-10 ranking, North/South Island filter, week score.
+- Theme switch (auto / light / dark).
+- Photo backgrounds per field and for the home page, all CC or public domain,
+  credits in `PHOTO-CREDITS.md`.
+- 15 more fields (18 total). Guides for the new club fields and some commercial
+  fields are marked as sketches and need local correction.
+- Snow cams: linked to official webcam pages (not embedded).
+- Map with a pin per field, sized by consensus snowfall over a chosen day range.
+
+## Still open
+
+- Tune the ranking formula against real weeks (`scoreDay` in `js/app.js`).
+- Season / open-status awareness so closed fields do not top the ranking.
+- Model accuracy by lead time once history exists.
+- Consider labelling the top few pins on the map.
+
+## Original ideas captured 2026-09-09
 
 ## 1. Home page: where to ski in NZ this week
 

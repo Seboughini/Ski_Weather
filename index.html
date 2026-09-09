@@ -4,86 +4,129 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NZ Ski Weather</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="backdrop" aria-hidden="true"></div>
+<div id="photo-credit" hidden></div>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><h1>NZ Ski Weather</h1><small>multi-model forecasts for the fields</small></div>
-    <nav class="tabs" id="mountain-tabs" aria-label="Mountains"></nav>
+    <div class="brand"><h1><a href="#/">NZ Ski Weather</a></h1><small>multi-model forecasts for the fields</small></div>
+    <nav class="topnav" aria-label="Site">
+      <a class="btn" href="#/">Rankings &amp; map</a>
+      <select id="mountain-select" aria-label="Choose a field"></select>
+      <button class="btn" id="theme-toggle" title="Switch between automatic, light and dark themes">◐ Auto</button>
+    </nav>
   </header>
-
-  <div class="mtn-head">
-    <div>
-      <h2 id="mtn-name">–</h2>
-      <div class="sub" id="mtn-meta"></div>
-      <div class="sub muted" id="status"></div>
-    </div>
-    <div class="controls">
-      <label><input type="checkbox" id="skill-toggle" checked> <span id="skill-toggle-label">Weight models by past accuracy</span></label>
-      <button class="btn" id="refresh">Refresh</button>
-    </div>
-  </div>
   <div id="error" hidden></div>
 
-  <div id="main">
+  <!-- Home: rankings and map -->
+  <div id="view-home" hidden>
+    <div class="hero">
+      <h1>Where to ski in New Zealand this week</h1>
+      <p>Every field ranked on a blend of seven global weather models: fresh snow, wind holds, rain risk, sunshine and how well each mountain handles the forecast wind direction. Scores are a guide, not gospel. Check the field's own report and that it is open before you drive.</p>
+      <div class="sub muted" id="home-status"></div>
+    </div>
     <section class="block">
-      <h2>7-day consensus</h2>
-      <p class="lead">Blend of all reporting models at mid-mountain. Snow shows the consensus with the model range beneath. Wind is the strongest summit wind during skiing hours. Click a day for the mountain read.</p>
-      <div class="days" id="day-cards"></div>
-    </section>
-
-    <section class="block">
-      <h2 id="read-title">Mountain read</h2>
-      <p class="lead">The consensus forecast for the selected day, interpreted against what this field likes and dislikes.</p>
-      <div class="read-grid">
-        <div>
-          <div id="compass"></div>
-          <div id="compass-caption"></div>
-        </div>
-        <div id="read-lines"></div>
+      <h2>Top fields for the next 7 days</h2>
+      <div class="filters" id="island-filter">
+        <button class="pill active" data-island="all">All NZ</button>
+        <button class="pill" data-island="South">South Island</button>
+        <button class="pill" data-island="North">North Island</button>
+        <button class="btn" id="home-refresh" style="margin-left:auto">Refresh</button>
       </div>
+      <div id="ranking"></div>
+      <p class="muted" style="font-size:12.5px;margin-top:8px">Week score: each day scores 0–100 from fresh snow (including the day before), wind against the field's hold threshold, rain risk at the base, storm visibility, warmth and sunshine, adjusted by the mountain's rating of the wind direction. The week score is half the average day and half the average of the best three days. Mini strip: weekday, weather, consensus snow (cm), day score bar.</p>
     </section>
-
     <section class="block">
-      <h2>Model comparison</h2>
-      <div class="table-controls">
-        <label for="metric-select">Show</label>
-        <select id="metric-select"></select>
+      <h2>Snowfall map</h2>
+      <p class="lead">Consensus snowfall at each field over the days you choose. Zoom in to separate the Craigieburn Range fields.</p>
+      <div class="map-controls">
+        <label for="map-from">From</label><select id="map-from"></select>
+        <label for="map-to">to</label><select id="map-to"></select>
       </div>
-      <div class="table-wrap"><table class="grid" id="model-table"></table></div>
-      <div id="table-caption"></div>
+      <div id="map"></div>
+      <div id="map-caption"></div>
     </section>
-
-    <section class="block">
-      <h2>Hourly model spread</h2>
-      <p class="lead">Every model as its own line, consensus in black. Hover for values.</p>
-      <div id="charts"></div>
-    </section>
-
-    <section class="block">
-      <h2>Model accuracy at this site</h2>
-      <div id="skill-body"></div>
-    </section>
-
-    <section class="block">
-      <h2>Mountain guide</h2>
-      <p class="lead" id="guide-summary"></p>
-      <p class="muted" id="guide-aspect"></p>
-      <h3>Wind directions</h3>
-      <div class="wind-cards" id="guide-winds"></div>
-      <div class="two-col">
-        <div><h3>Storm signatures</h3><ul id="guide-signatures"></ul></div>
-        <div><h3>Things to watch</h3><ul id="guide-flags"></ul></div>
-      </div>
-      <p class="muted" style="margin-top:10px">This guide is written from general knowledge of each field and is meant to be corrected from local experience. Edit <code>js/mountains.js</code>.</p>
-    </section>
-
-    <footer>
-      <p>Forecast data from <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a> (free, non-commercial). Global models are 10–25 km grids, so terrain is smoothed and snow totals at a specific field are estimates. Freezing level and summit wind are derived from the 850 and 700 hPa levels so every model is treated the same way. Model accuracy is scored against ERA5 reanalysis, not on-mountain observations. Always check the field's own snow report and road status before driving.</p>
-    </footer>
   </div>
+
+  <!-- Mountain detail -->
+  <div id="view-mountain" hidden>
+    <div class="mtn-head">
+      <div>
+        <h2 id="mtn-name">–</h2>
+        <div class="sub" id="mtn-meta"></div>
+        <div class="sub muted" id="status"></div>
+      </div>
+      <div class="controls">
+        <span id="mtn-links"></span>
+        <label><input type="checkbox" id="skill-toggle" checked> <span id="skill-toggle-label">Weight models by past accuracy</span></label>
+        <button class="btn" id="refresh">Refresh</button>
+      </div>
+    </div>
+
+    <div id="main">
+      <section class="block">
+        <h2>7-day consensus</h2>
+        <p class="lead">Blend of all reporting models at mid-mountain. Snow shows the consensus with the model range beneath. Wind is the strongest summit wind during skiing hours. Click a day for the mountain read.</p>
+        <div class="days" id="day-cards"></div>
+      </section>
+
+      <section class="block">
+        <h2 id="read-title">Mountain read</h2>
+        <p class="lead">The consensus forecast for the selected day, interpreted against what this field likes and dislikes.</p>
+        <div class="read-grid">
+          <div>
+            <div id="compass"></div>
+            <div id="compass-caption"></div>
+          </div>
+          <div id="read-lines"></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Model comparison</h2>
+        <div class="table-controls">
+          <label for="metric-select">Show</label>
+          <select id="metric-select"></select>
+        </div>
+        <div class="table-wrap"><table class="grid" id="model-table"></table></div>
+        <div id="table-caption"></div>
+      </section>
+
+      <section class="block">
+        <h2>Hourly model spread</h2>
+        <p class="lead">Every model as its own line, consensus in black. Hover for values.</p>
+        <div id="charts"></div>
+      </section>
+
+      <section class="block">
+        <h2>Model accuracy at this site</h2>
+        <div id="skill-body"></div>
+      </section>
+
+      <section class="block">
+        <h2>Mountain guide</h2>
+        <div class="notice" id="guide-detail" hidden>This guide is a sketch written from general knowledge and needs checking against local experience. Sectors, thresholds and text are all editable in <code>js/mountains.js</code>.</div>
+        <p class="lead" id="guide-summary"></p>
+        <p class="muted" id="guide-aspect"></p>
+        <h3>Wind directions</h3>
+        <div class="wind-cards" id="guide-winds"></div>
+        <div class="two-col">
+          <div><h3>Storm signatures</h3><ul id="guide-signatures"></ul></div>
+          <div><h3>Things to watch</h3><ul id="guide-flags"></ul></div>
+        </div>
+        <p class="muted" style="margin-top:10px">Snow cams are linked to each field's own webcam page rather than embedded, because the fields own those images and the URLs change without notice.</p>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p>Forecast data from <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a> (free, non-commercial). Global models are 10–25 km grids, so terrain is smoothed and snow totals at a specific field are estimates. Freezing level and summit wind are derived from the 850 and 700 hPa levels so every model is treated the same way. Model accuracy is scored against ERA5 reanalysis, not on-mountain observations. Map tiles © OpenStreetMap contributors. Photos are Creative Commons or public domain; see <code>PHOTO-CREDITS.md</code>. Always check the field's own snow report and road status before driving.</p>
+  </footer>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin=""></script>
 <script src="js/mountains.js"></script>
 <script src="js/app.js"></script>
 </body>
