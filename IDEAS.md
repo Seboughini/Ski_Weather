@@ -15,6 +15,17 @@ Read this file at the start of the next round of changes.
 
 ## Still open
 
+- **Map zoom gestures** (added 2026-09-09): two-finger pinch on a trackpad and
+  scroll-wheel zoom with a mouse, active only while the pointer is over the map
+  so normal page scrolling is unaffected elsewhere. Implementation notes: the
+  map currently has `scrollWheelZoom: false`. Leaflet already handles touch
+  pinch on phones. On a Mac trackpad, pinch arrives as a wheel event with the
+  Ctrl key flag set, so enabling Leaflet's scroll-wheel zoom on `mouseenter`
+  and disabling it on `mouseleave` covers both trackpad pinch and mouse wheel.
+  Two-finger scrolling on the trackpad would then also zoom while over the map;
+  if that feels wrong, the common alternative is "hold Ctrl/Cmd and scroll to
+  zoom" with a hint overlay. Decide which feel is wanted when building it.
+
 - **Recent snowfall and snow base** (added 2026-09-09): show snowfall over the
   last 48 hours and last 7 days, plus the current snow base depth, per field.
   Options: (a) Open-Meteo's historical/archive endpoints give model-estimated
