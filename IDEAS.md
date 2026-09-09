@@ -14,22 +14,11 @@ Read this file at the start of the next round of changes.
   keep it as links. Embedding still images would need the fields' permission on
   a public site; revisit only if that changes.
 - Map with a pin per field, sized by consensus snowfall over a chosen day range.
+- Map zoom: wheel / trackpad zoom enabled only while the pointer is over the
+  map (done 2026-09-09). Alternative if two-finger scroll feels wrong: hold
+  Cmd/Ctrl to zoom.
 
 ## Still open
-
-- **Map zoom gestures** (added 2026-09-09): two-finger pinch on a trackpad and
-  scroll-wheel zoom with a mouse, active only while the pointer is over the map
-  so normal page scrolling is unaffected elsewhere. Implementation notes: the
-  map currently has `scrollWheelZoom: false`. Leaflet already handles touch
-  pinch on phones. On a Mac trackpad, pinch arrives as a wheel event with the
-  Ctrl key flag set, so enabling Leaflet's scroll-wheel zoom on `mouseenter`
-  and disabling it on `mouseleave` covers both trackpad pinch and mouse wheel.
-  Two-finger scrolling on the trackpad would then also zoom while over the map;
-  if that feels wrong, the common alternative is "hold Ctrl/Cmd and scroll to
-  zoom" with a hint overlay. Decide which feel is wanted when building it.
-  Also replace the map's lead text ("Zoom in to separate the Craigieburn Range
-  fields") with short zoom/pan instructions that match whatever gesture is
-  chosen, e.g. "Drag to pan. Pinch or scroll over the map to zoom."
 
 - **Recent snowfall and snow base** (added 2026-09-09): show snowfall over the
   last 48 hours and last 7 days, plus the current snow base depth, per field.
