@@ -14,9 +14,10 @@ Read this file at the start of the next round of changes.
   keep it as links. Embedding still images would need the fields' permission on
   a public site; revisit only if that changes.
 - Map with a pin per field, sized by consensus snowfall over a chosen day range.
-- Map zoom: wheel / trackpad zoom enabled only while the pointer is over the
-  map (done 2026-09-09). Alternative if two-finger scroll feels wrong: hold
-  Cmd/Ctrl to zoom.
+- Map zoom (done 2026-09-09): trackpad pinch zooms; two-finger scroll and plain
+  mouse wheel scroll the page; mouse users hold Ctrl or Cmd while scrolling, or
+  use the + / − buttons. A browser cannot tell a mouse wheel from two-finger
+  trackpad scrolling reliably, which is why the modifier key is needed for mice.
 
 ## Still open
 

@@ -474,10 +474,19 @@
     const box = $('#map');
     if (!window.L) { box.replaceChildren(h('p', { class: 'muted', style: 'padding:12px' }, 'The map library could not be loaded (no internet, or the CDN is blocked). Rankings above still work.')); return; }
     if (!state.map) {
-      // Wheel / trackpad zoom only while the pointer is over the map, so the page scrolls normally elsewhere.
-      state.map = L.map(box, { scrollWheelZoom: false }).setView([-42.7, 171.4], 6);
-      box.addEventListener('mouseenter', () => state.map.scrollWheelZoom.enable());
-      box.addEventListener('mouseleave', () => state.map.scrollWheelZoom.disable());
+      // Zoom on trackpad pinch (which browsers report as a wheel event with the Ctrl flag) or on
+      // Ctrl/Cmd + mouse wheel. Plain scrolling over the map scrolls the page as normal.
+      state.map = L.map(box, { scrollWheelZoom: false, zoomSnap: 0.5, zoomDelta: 0.5 }).setView([-42.7, 171.4], 6);
+      let wheelAcc = 0;
+      box.addEventListener('wheel', ev => {
+        if (!(ev.ctrlKey || ev.metaKey)) return;       // two-finger scroll or plain wheel: leave it to the page
+        ev.preventDefault();                            // stop the browser zooming the whole page
+        wheelAcc += ev.deltaY;
+        if (Math.abs(wheelAcc) < 30) return;            // pinch sends many small deltas; batch them
+        const step = wheelAcc < 0 ? 0.5 : -0.5;
+        wheelAcc = 0;
+        state.map.setZoomAround(state.map.mouseEventToContainerPoint(ev), state.map.getZoom() + step);
+      }, { passive: false });
       box._skiMap = state.map; // exposed for debugging in the browser console
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 15, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(state.map);
       state.mapLayer = L.layerGroup().addTo(state.map);
