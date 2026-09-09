@@ -10,7 +10,9 @@ Read this file at the start of the next round of changes.
   credits in `PHOTO-CREDITS.md`.
 - 15 more fields (18 total). Guides for the new club fields and some commercial
   fields are marked as sketches and need local correction.
-- Snow cams: linked to official webcam pages (not embedded).
+- Snow cams: linked to official webcam pages (not embedded). Decision 2026-09-09:
+  keep it as links. Embedding still images would need the fields' permission on
+  a public site; revisit only if that changes.
 - Map with a pin per field, sized by consensus snowfall over a chosen day range.
 
 ## Still open
