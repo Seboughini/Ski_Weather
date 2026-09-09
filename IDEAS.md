@@ -15,6 +15,17 @@ Read this file at the start of the next round of changes.
 
 ## Still open
 
+- **Recent snowfall and snow base** (added 2026-09-09): show snowfall over the
+  last 48 hours and last 7 days, plus the current snow base depth, per field.
+  Options: (a) Open-Meteo's historical/archive endpoints give model-estimated
+  snowfall for past days at the forecast point, which is free and consistent
+  with the forecast but is not a measurement; (b) the fields publish measured
+  base depth and recent falls in their snow reports, but there is no free API
+  and scraping their pages is fragile and may breach their terms; (c) the daily
+  GitHub job could archive each day's "day 0" consensus snowfall so the site can
+  show a running 7-day total without extra requests. Recommended start: (a) for
+  recent snowfall plus a link to the field's own report for measured base.
+
 - Tune the ranking formula against real weeks (`scoreDay` in `js/app.js`).
 - Season / open-status awareness so closed fields do not top the ranking.
 - Model accuracy by lead time once history exists.
