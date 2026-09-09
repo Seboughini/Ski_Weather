@@ -1,0 +1,66 @@
+{
+ "generated": "2026-09-09T00:28:20+00:00",
+ "truth_source": "ERA5 reanalysis via the Open-Meteo archive API",
+ "method": "weight = shrink * (1/(MAE+eps)) normalised + (1-shrink) * equal, shrink = n/(n+14)",
+ "days_recorded": 1,
+ "days_scored": 0,
+ "mountains": {
+  "mt-hutt": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "cardrona": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "treble-cone": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  }
+ }
+}
