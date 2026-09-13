@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-09T00:28:20+00:00",
+ "generated": "2026-09-13T13:30:57+00:00",
  "truth_source": "ERA5 reanalysis via the Open-Meteo archive API",
  "method": "weight = shrink * (1/(MAE+eps)) normalised + (1-shrink) * equal, shrink = n/(n+14)",
- "days_recorded": 1,
+ "days_recorded": 2,
  "days_scored": 0,
  "mountains": {
   "mt-hutt": {
@@ -44,6 +44,291 @@
    }
   },
   "treble-cone": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "coronet-peak": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "remarkables": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "whakapapa": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "turoa": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "ohau": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "mt-dobson": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "roundhill": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "porters": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "craigieburn": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "broken-river": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "cheeseman": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "mt-olympus": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "temple-basin": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "mt-lyford": {
+   "vars": {
+    "snowfall_sum": {
+     "models": {}
+    },
+    "precipitation_sum": {
+     "models": {}
+    },
+    "temperature_2m_max": {
+     "models": {}
+    },
+    "temperature_2m_min": {
+     "models": {}
+    },
+    "wind_speed_10m_max": {
+     "models": {}
+    }
+   }
+  },
+  "rainbow": {
    "vars": {
     "snowfall_sum": {
      "models": {}
