@@ -1,3 +1,10 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# macOS Finder aliases (they are pointers, useless to anyone else)
+* alias
+
+# Scratch API responses kept while testing
+multi.json
+scratch*.json

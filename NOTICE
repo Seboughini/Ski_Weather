@@ -1,0 +1,38 @@
+NOTICE — what the LICENSE file covers, and what it does not
+===========================================================
+
+This repository holds three kinds of material under three different sets of
+terms. The MIT licence in LICENSE covers only the first.
+
+1. Source code and written content — MIT (see LICENSE)
+   ----------------------------------------------------
+   index.html, css/, js/, scripts/, and the documentation files. This includes
+   the mountain guide text in js/mountains.js.
+
+2. Photographs in img/ — individual Creative Commons and public domain terms
+   -------------------------------------------------------------------------
+   These are other people's work, reproduced here under the licences they were
+   published with. They are NOT MIT licensed and cannot be relicensed by this
+   project. Each file's author, licence and source page is listed in
+   PHOTO-CREDITS.md. If you reuse a photo, follow that photo's own licence,
+   which in every case requires attribution and in some cases requires
+   share-alike terms on adaptations.
+
+   Placing these files alongside MIT licensed code is aggregation, not
+   adaptation, so the share-alike terms on some photos do not extend to the
+   code in this repository.
+
+3. Weather data in data/ — CC BY 4.0, from Open-Meteo
+   --------------------------------------------------
+   The recorded forecasts and derived accuracy scores come from the Open-Meteo
+   API (https://open-meteo.com). Open-Meteo licenses its data under CC BY 4.0
+   and requires attribution, which the site gives in the page footer.
+
+   Note on the API itself: Open-Meteo's free tier is for NON-COMMERCIAL use
+   only and is rate limited. The MIT licence on this code does not grant you
+   commercial use of their service. If you fork this project for anything
+   commercial, you need your own Open-Meteo subscription.
+
+Map tiles are served by OpenStreetMap and are © OpenStreetMap contributors,
+available under the Open Database License. Leaflet is loaded from a CDN and is
+not redistributed here; it is BSD-2-Clause licensed.

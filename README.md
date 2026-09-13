@@ -100,3 +100,13 @@ totals at a single field are estimates. The accuracy scoring uses ERA5
 reanalysis as truth because there is no free observation feed for the fields.
 The mountain guide text is general knowledge, meant to be corrected from local
 experience. Open-Meteo's free tier is for non-commercial use.
+
+## License and reuse
+
+The code is MIT licensed, see `LICENSE`. That covers the source only.
+
+The photographs in `img/` belong to their photographers and stay under the
+Creative Commons or public domain terms listed in `PHOTO-CREDITS.md`. The
+weather data in `data/` comes from Open-Meteo under CC BY 4.0, and their free
+API tier is non-commercial and rate limited. `NOTICE` sets all of this out in
+full. Read it before reusing anything beyond the code.
