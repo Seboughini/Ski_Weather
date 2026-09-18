@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-17T13:53:22+00:00",
+ "generated": "2026-09-18T13:16:26+00:00",
  "truth_source": "ERA5 reanalysis via the Open-Meteo archive API",
  "method": "weight = shrink * (1/(MAE+eps)) normalised + (1-shrink) * equal, shrink = n/(n+14)",
- "days_recorded": 6,
+ "days_recorded": 7,
  "days_scored": 1,
  "mountains": {
   "mt-hutt": {
@@ -10,90 +10,90 @@
     "snowfall_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.315,
-       "bias": -0.315,
+       "n": 5,
+       "mae": 0.252,
+       "bias": -0.252,
        "mae_by_lead": [
         0.0,
         1.26,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1402
+       "weight": 0.1407
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.105,
-       "bias": 0.105,
+       "n": 5,
+       "mae": 0.084,
+       "bias": 0.084,
        "mae_by_lead": [
         0.0,
         0.42,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1503
+       "weight": 0.1508
       },
       "icon_global": {
-       "n": 4,
-       "mae": 0.157,
-       "bias": -0.157,
+       "n": 5,
+       "mae": 0.126,
+       "bias": -0.126,
        "mae_by_lead": [
         0.0,
         0.63,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1472
+       "weight": 0.1478
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 0.403,
-       "bias": 0.403,
+       "n": 5,
+       "mae": 0.322,
+       "bias": 0.322,
        "mae_by_lead": [
         0.0,
         0.98,
         0.14,
         0.49,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1374
+       "weight": 0.1377
       },
       "gem_global": {
-       "n": 4,
-       "mae": 0.368,
-       "bias": 0.368,
+       "n": 5,
+       "mae": 0.294,
+       "bias": 0.294,
        "mae_by_lead": [
         0.0,
         1.47,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1384
+       "weight": 0.1388
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 0.542,
-       "bias": 0.228,
+       "n": 5,
+       "mae": 0.434,
+       "bias": 0.182,
        "mae_by_lead": [
         0.07,
         0.63,
         1.47,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
@@ -112,101 +112,101 @@
         null,
         null
        ],
-       "weight": 0.1527
+       "weight": 0.1505
       }
      }
     },
     "precipitation_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.5,
-       "bias": -0.5,
+       "n": 5,
+       "mae": 0.48,
+       "bias": -0.32,
        "mae_by_lead": [
         0.0,
         1.9,
         0.1,
         0.0,
-        null,
+        0.4,
         null,
         null
        ],
-       "weight": 0.1452
+       "weight": 0.1447
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.15,
-       "bias": -0.15,
+       "n": 5,
+       "mae": 0.12,
+       "bias": -0.12,
        "mae_by_lead": [
         0.0,
         0.5,
         0.1,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1635
+       "weight": 0.1677
       },
       "icon_global": {
-       "n": 4,
-       "mae": 0.625,
-       "bias": 0.075,
+       "n": 5,
+       "mae": 0.56,
+       "bias": 0.12,
        "mae_by_lead": [
         0.0,
         1.0,
         0.1,
         1.4,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1414
+       "weight": 0.1418
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 0.325,
-       "bias": 0.225,
+       "n": 5,
+       "mae": 0.38,
+       "bias": 0.3,
        "mae_by_lead": [
         0.0,
         0.2,
         0.4,
         0.7,
-        null,
+        0.6,
         null,
         null
        ],
-       "weight": 0.1524
+       "weight": 0.1492
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.725,
-       "bias": 1.675,
+       "n": 5,
+       "mae": 1.38,
+       "bias": 1.34,
        "mae_by_lead": [
         0.0,
         6.8,
         0.1,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1264
+       "weight": 0.1258
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.15,
-       "bias": -0.1,
+       "n": 5,
+       "mae": 0.92,
+       "bias": -0.08,
        "mae_by_lead": [
         0.1,
         2.5,
         2.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1317
+       "weight": 0.1325
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -221,101 +221,101 @@
         null,
         null
        ],
-       "weight": 0.1395
+       "weight": 0.1383
       }
      }
     },
     "temperature_2m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.375,
-       "bias": -0.025,
+       "n": 5,
+       "mae": 0.32,
+       "bias": -0.04,
        "mae_by_lead": [
         0.6,
         0.6,
         0.1,
         0.2,
-        null,
+        0.1,
         null,
         null
        ],
-       "weight": 0.1904
+       "weight": 0.2019
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.25,
-       "bias": -0.8,
+       "n": 5,
+       "mae": 1.3,
+       "bias": -0.94,
        "mae_by_lead": [
         0.9,
         1.0,
         1.1,
         2.0,
-        null,
+        1.5,
         null,
         null
        ],
-       "weight": 0.1457
+       "weight": 0.1426
       },
       "icon_global": {
-       "n": 4,
-       "mae": 2.15,
-       "bias": 2.15,
+       "n": 5,
+       "mae": 1.9,
+       "bias": 1.54,
        "mae_by_lead": [
         3.4,
         1.1,
         2.7,
         1.4,
-        null,
+        0.9,
         null,
         null
        ],
-       "weight": 0.133
+       "weight": 0.1323
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 2.075,
-       "bias": 1.275,
+       "n": 5,
+       "mae": 2.44,
+       "bias": 0.24,
        "mae_by_lead": [
         3.1,
         0.6,
         3.0,
         1.6,
-        null,
+        3.9,
         null,
         null
        ],
-       "weight": 0.1337
+       "weight": 0.127
       },
       "gem_global": {
-       "n": 4,
-       "mae": 2.9,
-       "bias": 2.9,
+       "n": 5,
+       "mae": 2.4,
+       "bias": 2.24,
        "mae_by_lead": [
         4.6,
         1.5,
         3.3,
         2.2,
-        null,
+        0.4,
         null,
         null
        ],
-       "weight": 0.1278
+       "weight": 0.1273
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.725,
-       "bias": 1.725,
+       "n": 5,
+       "mae": 1.5,
+       "bias": 1.26,
        "mae_by_lead": [
         3.0,
         0.4,
         2.8,
         0.7,
-        null,
+        0.6,
         null,
         null
        ],
-       "weight": 0.1376
+       "weight": 0.1384
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -330,101 +330,101 @@
         null,
         null
        ],
-       "weight": 0.1319
+       "weight": 0.1306
       }
      }
     },
     "temperature_2m_min": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.4,
-       "bias": 0.0,
+       "n": 5,
+       "mae": 0.34,
+       "bias": -0.02,
        "mae_by_lead": [
         0.4,
         0.4,
         0.4,
         0.4,
-        null,
+        0.1,
         null,
         null
        ],
-       "weight": 0.1812
+       "weight": 0.1923
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.65,
-       "bias": 0.1,
+       "n": 5,
+       "mae": 0.76,
+       "bias": -0.16,
        "mae_by_lead": [
         1.5,
         0.1,
         0.9,
         0.1,
-        null,
+        1.2,
         null,
         null
        ],
-       "weight": 0.1627
+       "weight": 0.1577
       },
       "icon_global": {
-       "n": 4,
-       "mae": 4.35,
-       "bias": 4.35,
+       "n": 5,
+       "mae": 3.92,
+       "bias": 3.92,
        "mae_by_lead": [
         5.5,
         3.7,
         4.3,
         3.9,
-        null,
+        2.2,
         null,
         null
        ],
-       "weight": 0.1217
+       "weight": 0.1182
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.4,
-       "bias": 1.05,
+       "n": 5,
+       "mae": 1.12,
+       "bias": 0.84,
        "mae_by_lead": [
         2.5,
         1.1,
         1.3,
         0.7,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.14
+       "weight": 0.1443
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.75,
-       "bias": 1.75,
+       "n": 5,
+       "mae": 1.74,
+       "bias": 1.06,
        "mae_by_lead": [
         1.4,
         3.2,
         1.8,
         0.6,
-        null,
+        1.7,
         null,
         null
        ],
-       "weight": 0.135
+       "weight": 0.1323
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.875,
-       "bias": 1.875,
+       "n": 5,
+       "mae": 1.9,
+       "bias": 1.1,
        "mae_by_lead": [
         1.6,
         4.2,
         1.5,
         0.2,
-        null,
+        2.0,
         null,
         null
        ],
-       "weight": 0.1337
+       "weight": 0.1303
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -439,101 +439,101 @@
         null,
         null
        ],
-       "weight": 0.1258
+       "weight": 0.1248
       }
      }
     },
     "wind_speed_10m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.525,
-       "bias": 0.475,
+       "n": 5,
+       "mae": 0.42,
+       "bias": 0.38,
        "mae_by_lead": [
         0.2,
         0.1,
         0.5,
         1.3,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1734
+       "weight": 0.1811
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 15.15,
-       "bias": 15.15,
+       "n": 5,
+       "mae": 14.56,
+       "bias": 14.56,
        "mae_by_lead": [
         16.7,
         10.2,
         20.4,
         13.3,
-        null,
+        12.2,
         null,
         null
        ],
-       "weight": 0.1203
+       "weight": 0.1166
       },
       "icon_global": {
-       "n": 4,
-       "mae": 10.0,
-       "bias": 10.0,
+       "n": 5,
+       "mae": 9.78,
+       "bias": 9.78,
        "mae_by_lead": [
         12.7,
         9.1,
         10.3,
         7.9,
-        null,
+        8.9,
         null,
         null
        ],
-       "weight": 0.1242
+       "weight": 0.1211
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 7.55,
-       "bias": 7.55,
+       "n": 5,
+       "mae": 6.54,
+       "bias": 6.54,
        "mae_by_lead": [
         12.5,
         8.2,
         7.7,
         1.8,
-        null,
+        2.5,
         null,
         null
        ],
-       "weight": 0.1276
+       "weight": 0.127
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.0,
-       "bias": 0.1,
+       "n": 5,
+       "mae": 1.1,
+       "bias": -0.22,
        "mae_by_lead": [
         0.3,
         0.3,
         1.6,
         1.8,
-        null,
+        1.5,
         null,
         null
        ],
-       "weight": 0.1635
+       "weight": 0.1645
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 5.675,
-       "bias": 5.675,
+       "n": 5,
+       "mae": 5.26,
+       "bias": 5.26,
        "mae_by_lead": [
         7.7,
         6.4,
         6.3,
         2.3,
-        null,
+        3.6,
         null,
         null
        ],
-       "weight": 0.1316
+       "weight": 0.1307
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -548,7 +548,7 @@
         null,
         null
        ],
-       "weight": 0.1595
+       "weight": 0.1589
       }
      }
     }
@@ -559,94 +559,94 @@
     "snowfall_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.98,
-       "bias": -0.35,
+       "n": 5,
+       "mae": 0.784,
+       "bias": -0.28,
        "mae_by_lead": [
         2.59,
         1.26,
         0.0,
         0.07,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.147
+       "weight": 0.1487
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.49,
-       "bias": -0.49,
+       "n": 5,
+       "mae": 0.392,
+       "bias": -0.392,
        "mae_by_lead": [
         1.82,
         0.0,
         0.0,
         0.14,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1648
+       "weight": 0.1679
       },
       "icon_global": {
-       "n": 4,
-       "mae": 1.628,
-       "bias": -1.628,
+       "n": 5,
+       "mae": 1.302,
+       "bias": -1.302,
        "mae_by_lead": [
         2.45,
         3.85,
         0.0,
         0.21,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1361
+       "weight": 0.1362
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.138,
-       "bias": 0.122,
+       "n": 5,
+       "mae": 0.994,
+       "bias": 0.182,
        "mae_by_lead": [
         1.05,
         0.98,
         1.68,
         0.84,
-        null,
+        0.42,
         null,
         null
        ],
-       "weight": 0.1436
+       "weight": 0.1426
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.943,
-       "bias": -1.943,
+       "n": 5,
+       "mae": 1.554,
+       "bias": -1.554,
        "mae_by_lead": [
         2.38,
         5.18,
         0.0,
         0.21,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1329
+       "weight": 0.1324
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.383,
-       "bias": -0.613,
+       "n": 5,
+       "mae": 1.162,
+       "bias": -0.434,
        "mae_by_lead": [
         2.59,
         1.4,
         0.28,
         1.26,
-        null,
+        0.28,
         null,
         null
        ],
-       "weight": 0.1393
+       "weight": 0.1388
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -661,101 +661,101 @@
         null,
         null
        ],
-       "weight": 0.1363
+       "weight": 0.1334
       }
      }
     },
     "precipitation_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 1.875,
-       "bias": -0.175,
+       "n": 5,
+       "mae": 1.68,
+       "bias": -0.32,
        "mae_by_lead": [
         3.6,
         3.4,
         0.4,
         0.1,
-        null,
+        0.9,
         null,
         null
        ],
-       "weight": 0.1393
+       "weight": 0.1392
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.075,
-       "bias": -0.775,
+       "n": 5,
+       "mae": 1.04,
+       "bias": -0.8,
        "mae_by_lead": [
         3.5,
         0.5,
         0.2,
         0.1,
-        null,
+        0.9,
         null,
         null
        ],
-       "weight": 0.1536
+       "weight": 0.1532
       },
       "icon_global": {
-       "n": 4,
-       "mae": 1.475,
-       "bias": -1.475,
+       "n": 5,
+       "mae": 1.36,
+       "bias": -1.36,
        "mae_by_lead": [
         1.5,
         3.6,
         0.5,
         0.3,
-        null,
+        0.9,
         null,
         null
        ],
        "weight": 0.145
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.875,
-       "bias": -0.025,
+       "n": 5,
+       "mae": 1.56,
+       "bias": -0.08,
        "mae_by_lead": [
         2.4,
         1.4,
         2.5,
         1.2,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1393
+       "weight": 0.1412
       },
       "gem_global": {
-       "n": 4,
-       "mae": 2.525,
-       "bias": -2.525,
+       "n": 5,
+       "mae": 2.2,
+       "bias": -2.2,
        "mae_by_lead": [
         2.3,
         7.0,
         0.5,
         0.3,
-        null,
+        0.9,
         null,
         null
        ],
-       "weight": 0.1332
+       "weight": 0.1327
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 2.1,
-       "bias": -1.2,
+       "n": 5,
+       "mae": 1.72,
+       "bias": -1.0,
        "mae_by_lead": [
         4.6,
         2.0,
         0.0,
         1.8,
-        null,
+        0.2,
         null,
         null
        ],
-       "weight": 0.1368
+       "weight": 0.1386
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -770,101 +770,101 @@
         null,
         null
        ],
-       "weight": 0.1529
+       "weight": 0.1501
       }
      }
     },
     "temperature_2m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.525,
-       "bias": 0.525,
+       "n": 5,
+       "mae": 0.52,
+       "bias": 0.52,
        "mae_by_lead": [
         1.7,
         0.0,
         0.2,
         0.2,
-        null,
+        0.5,
         null,
         null
        ],
-       "weight": 0.1789
+       "weight": 0.1843
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.85,
-       "bias": 0.85,
+       "n": 5,
+       "mae": 0.94,
+       "bias": 0.94,
        "mae_by_lead": [
         0.5,
         0.8,
         0.1,
         2.0,
-        null,
+        1.3,
         null,
         null
        ],
-       "weight": 0.1598
+       "weight": 0.1574
       },
       "icon_global": {
-       "n": 4,
-       "mae": 3.525,
-       "bias": 3.525,
+       "n": 5,
+       "mae": 3.46,
+       "bias": 3.46,
        "mae_by_lead": [
         3.9,
         3.8,
         3.7,
         2.7,
-        null,
+        3.2,
         null,
         null
        ],
-       "weight": 0.1257
+       "weight": 0.1222
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.725,
-       "bias": 1.525,
+       "n": 5,
+       "mae": 1.46,
+       "bias": 1.3,
        "mae_by_lead": [
         2.8,
         1.9,
         1.8,
         0.4,
-        null,
+        0.4,
         null,
         null
        ],
-       "weight": 0.1387
+       "weight": 0.1419
       },
       "gem_global": {
-       "n": 4,
-       "mae": 3.5,
-       "bias": 3.5,
+       "n": 5,
+       "mae": 3.32,
+       "bias": 3.32,
        "mae_by_lead": [
         4.5,
         2.8,
         3.0,
         3.7,
-        null,
+        2.6,
         null,
         null
        ],
-       "weight": 0.1258
+       "weight": 0.1228
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.125,
-       "bias": 0.925,
+       "n": 5,
+       "mae": 1.1,
+       "bias": 0.54,
        "mae_by_lead": [
         1.5,
         1.7,
         0.9,
         0.4,
-        null,
+        1.0,
         null,
         null
        ],
-       "weight": 0.1504
+       "weight": 0.1514
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -879,101 +879,101 @@
         null,
         null
        ],
-       "weight": 0.1206
+       "weight": 0.12
       }
      }
     },
     "temperature_2m_min": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 0.5,
-       "bias": 0.25,
+       "n": 5,
+       "mae": 0.42,
+       "bias": 0.22,
        "mae_by_lead": [
         0.9,
         0.5,
         0.2,
         0.4,
-        null,
+        0.1,
         null,
         null
        ],
-       "weight": 0.1794
+       "weight": 0.1914
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.6,
-       "bias": -1.6,
+       "n": 5,
+       "mae": 1.48,
+       "bias": -1.48,
        "mae_by_lead": [
         1.8,
         1.0,
         1.4,
         2.2,
-        null,
+        1.0,
         null,
         null
        ],
        "weight": 0.1399
       },
       "icon_global": {
-       "n": 4,
-       "mae": 3.575,
-       "bias": 3.575,
+       "n": 5,
+       "mae": 3.4,
+       "bias": 3.4,
        "mae_by_lead": [
         2.4,
         4.3,
         6.0,
         1.6,
-        null,
+        2.7,
         null,
         null
        ],
-       "weight": 0.1252
+       "weight": 0.1218
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.15,
-       "bias": 0.95,
+       "n": 5,
+       "mae": 1.06,
+       "bias": 0.62,
        "mae_by_lead": [
         0.4,
         1.5,
         2.2,
         0.5,
-        null,
+        0.7,
         null,
         null
        ],
-       "weight": 0.1488
+       "weight": 0.1507
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.425,
-       "bias": -0.525,
+       "n": 5,
+       "mae": 1.6,
+       "bias": -0.88,
        "mae_by_lead": [
         2.3,
         1.0,
         0.6,
         1.8,
-        null,
+        2.3,
         null,
         null
        ],
-       "weight": 0.1428
+       "weight": 0.1377
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.75,
-       "bias": 1.45,
+       "n": 5,
+       "mae": 1.9,
+       "bias": 0.66,
        "mae_by_lead": [
         0.6,
         2.5,
         2.3,
         1.6,
-        null,
+        2.5,
         null,
         null
        ],
-       "weight": 0.1378
+       "weight": 0.1332
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -988,101 +988,101 @@
         null,
         null
        ],
-       "weight": 0.1262
+       "weight": 0.1253
       }
      }
     },
     "wind_speed_10m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 2.875,
-       "bias": -1.525,
+       "n": 5,
+       "mae": 2.64,
+       "bias": -1.56,
        "mae_by_lead": [
         1.6,
         2.7,
         0.4,
         6.8,
-        null,
+        1.7,
         null,
         null
        ],
-       "weight": 0.1571
+       "weight": 0.1595
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 4.7,
-       "bias": 3.55,
+       "n": 5,
+       "mae": 4.3,
+       "bias": 3.38,
        "mae_by_lead": [
         2.5,
         6.4,
         7.6,
         2.3,
-        null,
+        2.7,
         null,
         null
        ],
-       "weight": 0.1446
+       "weight": 0.1452
       },
       "icon_global": {
-       "n": 4,
-       "mae": 17.4,
-       "bias": 17.4,
+       "n": 5,
+       "mae": 16.36,
+       "bias": 16.36,
        "mae_by_lead": [
         7.1,
         10.9,
         28.9,
         22.7,
-        null,
+        12.2,
         null,
         null
        ],
-       "weight": 0.1227
+       "weight": 0.1189
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 8.325,
-       "bias": 8.325,
+       "n": 5,
+       "mae": 6.96,
+       "bias": 6.36,
        "mae_by_lead": [
         6.5,
         15.8,
         4.6,
         6.4,
-        null,
+        1.5,
         null,
         null
        ],
-       "weight": 0.1328
+       "weight": 0.1333
       },
       "gem_global": {
-       "n": 4,
-       "mae": 3.25,
-       "bias": -3.1,
+       "n": 5,
+       "mae": 2.98,
+       "bias": -2.86,
        "mae_by_lead": [
         4.3,
         0.3,
         3.7,
         4.7,
-        null,
+        1.9,
         null,
         null
        ],
-       "weight": 0.1538
+       "weight": 0.1558
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 3.725,
-       "bias": 3.725,
+       "n": 5,
+       "mae": 3.64,
+       "bias": 3.64,
        "mae_by_lead": [
         2.1,
         2.9,
         6.9,
         3.0,
-        null,
+        3.3,
         null,
         null
        ],
-       "weight": 0.1503
+       "weight": 0.1499
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1097,7 +1097,7 @@
         null,
         null
        ],
-       "weight": 0.1388
+       "weight": 0.1373
       }
      }
     }
@@ -1108,94 +1108,94 @@
     "snowfall_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 2.38,
-       "bias": -2.135,
+       "n": 5,
+       "mae": 1.904,
+       "bias": -1.708,
        "mae_by_lead": [
         9.03,
         0.35,
         0.0,
         0.14,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.138
+       "weight": 0.1377
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 0.962,
-       "bias": -0.822,
+       "n": 5,
+       "mae": 0.77,
+       "bias": -0.658,
        "mae_by_lead": [
         3.5,
         0.07,
         0.0,
         0.28,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1641
+       "weight": 0.167
       },
       "icon_global": {
-       "n": 4,
-       "mae": 2.31,
-       "bias": -2.31,
+       "n": 5,
+       "mae": 1.848,
+       "bias": -1.848,
        "mae_by_lead": [
         4.34,
         4.9,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1387
+       "weight": 0.1385
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.015,
-       "bias": -0.805,
+       "n": 5,
+       "mae": 0.812,
+       "bias": -0.644,
        "mae_by_lead": [
         3.22,
         0.42,
         0.28,
         0.14,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1622
+       "weight": 0.165
       },
       "gem_global": {
-       "n": 4,
-       "mae": 3.517,
-       "bias": -3.517,
+       "n": 5,
+       "mae": 2.814,
+       "bias": -2.814,
        "mae_by_lead": [
         8.4,
         5.67,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1304
+       "weight": 0.1288
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 2.643,
-       "bias": -2.643,
+       "n": 5,
+       "mae": 2.114,
+       "bias": -2.114,
        "mae_by_lead": [
         8.96,
         1.61,
         0.0,
         0.0,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1358
+       "weight": 0.1351
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1210,101 +1210,101 @@
         null,
         null
        ],
-       "weight": 0.1309
+       "weight": 0.1278
       }
      }
     },
     "precipitation_sum": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 3.575,
-       "bias": -2.425,
+       "n": 5,
+       "mae": 2.92,
+       "bias": -2.0,
        "mae_by_lead": [
         12.0,
         2.1,
         0.0,
         0.2,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1345
+       "weight": 0.1338
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.425,
-       "bias": -1.175,
+       "n": 5,
+       "mae": 1.18,
+       "bias": -0.98,
        "mae_by_lead": [
         5.1,
         0.0,
         0.1,
         0.5,
-        null,
+        0.2,
         null,
         null
        ],
-       "weight": 0.1606
+       "weight": 0.1635
       },
       "icon_global": {
-       "n": 4,
-       "mae": 2.1,
-       "bias": -1.85,
+       "n": 5,
+       "mae": 1.74,
+       "bias": -1.54,
        "mae_by_lead": [
         3.5,
         4.3,
         0.1,
         0.5,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1477
+       "weight": 0.1489
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 1.45,
-       "bias": -1.2,
+       "n": 5,
+       "mae": 1.22,
+       "bias": -1.02,
        "mae_by_lead": [
         4.7,
         0.6,
         0.3,
         0.2,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1599
+       "weight": 0.1621
       },
       "gem_global": {
-       "n": 4,
-       "mae": 4.625,
-       "bias": -4.625,
+       "n": 5,
+       "mae": 3.76,
+       "bias": -3.76,
        "mae_by_lead": [
         11.2,
         7.2,
         0.1,
         0.0,
-        null,
+        0.3,
         null,
         null
        ],
-       "weight": 0.1297
+       "weight": 0.1281
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 3.8,
-       "bias": -3.8,
+       "n": 5,
+       "mae": 3.08,
+       "bias": -3.08,
        "mae_by_lead": [
         12.9,
         2.3,
         0.0,
         0.0,
-        null,
+        0.2,
         null,
         null
        ],
-       "weight": 0.1333
+       "weight": 0.1325
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1319,101 +1319,101 @@
         null,
         null
        ],
-       "weight": 0.1343
+       "weight": 0.1311
       }
      }
     },
     "temperature_2m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 1.225,
-       "bias": 0.125,
+       "n": 5,
+       "mae": 1.18,
+       "bias": 0.3,
        "mae_by_lead": [
         2.7,
         1.3,
         0.1,
         0.8,
-        null,
+        1.0,
         null,
         null
        ],
-       "weight": 0.1571
+       "weight": 0.1606
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.175,
-       "bias": -1.175,
+       "n": 5,
+       "mae": 1.2,
+       "bias": -1.2,
        "mae_by_lead": [
         1.3,
         0.5,
         2.1,
         0.8,
-        null,
+        1.3,
         null,
         null
        ],
-       "weight": 0.1587
+       "weight": 0.1599
       },
       "icon_global": {
-       "n": 4,
-       "mae": 2.875,
-       "bias": 2.875,
+       "n": 5,
+       "mae": 3.08,
+       "bias": 3.08,
        "mae_by_lead": [
         4.1,
         1.9,
         2.8,
         2.7,
-        null,
+        3.9,
         null,
         null
        ],
-       "weight": 0.1332
+       "weight": 0.1293
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 2.25,
-       "bias": 2.25,
+       "n": 5,
+       "mae": 2.38,
+       "bias": 2.38,
        "mae_by_lead": [
         3.8,
         1.6,
         2.7,
         0.9,
-        null,
+        2.9,
         null,
         null
        ],
-       "weight": 0.1386
+       "weight": 0.1357
       },
       "gem_global": {
-       "n": 4,
-       "mae": 3.6,
-       "bias": 3.6,
+       "n": 5,
+       "mae": 3.66,
+       "bias": 3.66,
        "mae_by_lead": [
         4.6,
         2.4,
         3.6,
         3.8,
-        null,
+        3.9,
         null,
         null
        ],
-       "weight": 0.1291
+       "weight": 0.1257
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 1.15,
-       "bias": 1.15,
+       "n": 5,
+       "mae": 1.06,
+       "bias": 1.06,
        "mae_by_lead": [
         1.6,
         1.0,
         1.0,
         1.0,
-        null,
+        0.7,
         null,
         null
        ],
-       "weight": 0.1595
+       "weight": 0.1656
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1428,101 +1428,101 @@
         null,
         null
        ],
-       "weight": 0.1237
+       "weight": 0.1232
       }
      }
     },
     "temperature_2m_min": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 4.225,
-       "bias": 4.225,
+       "n": 5,
+       "mae": 3.5,
+       "bias": 3.5,
        "mae_by_lead": [
         7.8,
         2.5,
         3.7,
         2.9,
-        null,
+        0.6,
         null,
         null
        ],
-       "weight": 0.1422
+       "weight": 0.1457
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 1.75,
-       "bias": 0.7,
+       "n": 5,
+       "mae": 1.9,
+       "bias": 0.06,
        "mae_by_lead": [
         3.9,
         0.1,
         0.9,
         2.1,
-        null,
+        2.5,
         null,
         null
        ],
-       "weight": 0.1798
+       "weight": 0.1753
       },
       "icon_global": {
-       "n": 4,
-       "mae": 8.0,
-       "bias": 8.0,
+       "n": 5,
+       "mae": 7.08,
+       "bias": 7.08,
        "mae_by_lead": [
         10.2,
         7.6,
         9.6,
         4.6,
-        null,
+        3.4,
         null,
         null
        ],
-       "weight": 0.1281
+       "weight": 0.126
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 4.825,
-       "bias": 4.825,
+       "n": 5,
+       "mae": 3.86,
+       "bias": 3.86,
        "mae_by_lead": [
         6.6,
         4.5,
         4.7,
         3.5,
-        null,
+        0.0,
         null,
         null
        ],
-       "weight": 0.1386
+       "weight": 0.1422
       },
       "gem_global": {
-       "n": 4,
-       "mae": 4.6,
-       "bias": 4.6,
+       "n": 5,
+       "mae": 3.76,
+       "bias": 3.76,
        "mae_by_lead": [
         7.0,
         3.2,
         3.4,
         4.8,
-        null,
+        0.4,
         null,
         null
        ],
-       "weight": 0.1398
+       "weight": 0.1431
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 4.275,
-       "bias": 4.275,
+       "n": 5,
+       "mae": 4.16,
+       "bias": 2.68,
        "mae_by_lead": [
         6.4,
         4.2,
         4.1,
         2.4,
-        null,
+        3.7,
         null,
         null
        ],
-       "weight": 0.1419
+       "weight": 0.1397
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1537,101 +1537,101 @@
         null,
         null
        ],
-       "weight": 0.1296
+       "weight": 0.128
       }
      }
     },
     "wind_speed_10m_max": {
      "models": {
       "ecmwf_ifs025": {
-       "n": 4,
-       "mae": 2.8,
-       "bias": 2.55,
+       "n": 5,
+       "mae": 2.74,
+       "bias": 2.54,
        "mae_by_lead": [
         0.5,
         3.1,
         5.0,
         2.6,
-        null,
+        2.5,
         null,
         null
        ],
-       "weight": 0.1495
+       "weight": 0.1508
       },
       "gfs_global": {
-       "n": 4,
-       "mae": 4.575,
-       "bias": 4.575,
+       "n": 5,
+       "mae": 4.58,
+       "bias": 4.58,
        "mae_by_lead": [
         5.1,
         4.2,
         4.6,
         4.4,
-        null,
+        4.6,
         null,
         null
        ],
-       "weight": 0.1391
+       "weight": 0.1381
       },
       "icon_global": {
-       "n": 4,
-       "mae": 12.75,
-       "bias": 12.75,
+       "n": 5,
+       "mae": 11.28,
+       "bias": 11.28,
        "mae_by_lead": [
         5.3,
         8.4,
         20.5,
         16.8,
-        null,
+        5.4,
         null,
         null
        ],
-       "weight": 0.1236
+       "weight": 0.1217
       },
       "ukmo_global_deterministic_10km": {
-       "n": 4,
-       "mae": 8.55,
-       "bias": 8.55,
+       "n": 5,
+       "mae": 7.66,
+       "bias": 7.66,
        "mae_by_lead": [
         3.0,
         13.3,
         11.1,
         6.8,
-        null,
+        4.1,
         null,
         null
        ],
-       "weight": 0.1286
+       "weight": 0.1277
       },
       "gem_global": {
-       "n": 4,
-       "mae": 1.8,
-       "bias": -1.1,
+       "n": 5,
+       "mae": 1.54,
+       "bias": -0.98,
        "mae_by_lead": [
         2.8,
         1.1,
         1.9,
         1.4,
-        null,
+        0.5,
         null,
         null
        ],
-       "weight": 0.1596
+       "weight": 0.1662
       },
       "jma_gsm": {
-       "n": 4,
-       "mae": 3.825,
-       "bias": 3.825,
+       "n": 5,
+       "mae": 4.4,
+       "bias": 4.4,
        "mae_by_lead": [
         4.7,
         2.6,
         4.7,
         3.3,
-        null,
+        6.7,
         null,
         null
        ],
-       "weight": 0.1427
+       "weight": 0.1391
       },
       "meteofrance_arpege_world": {
        "n": 4,
@@ -1646,7 +1646,7 @@
         null,
         null
        ],
-       "weight": 0.1569
+       "weight": 0.1564
       }
      }
     }
